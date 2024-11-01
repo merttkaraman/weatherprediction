@@ -1,0 +1,97 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  background-image: url("background.jpg"); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.7); /* Arka plan resminin üzerine beyaz renk ekle ve opaklığı azalt */
+  margin: 0; 
+  padding: 0;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.7); /* Opak beyaz arka plan */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+  text-align: center;
+  width: 80%; /* Genişliği %80 olarak ayarla */
+  max-width: 600px; /* Maksimum genişlik 600px */
+  margin: 50px auto; /* Üst ve alt margin 50px, sağ ve sol margin otomatik */
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+#tahminAlani input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#tahminAlani button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#geriBildirim {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#kalanHak, #puan {
+  margin-top: 10px;
+}
+
+.card-container {
+  width: 300px;
+  height: 100px; 
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.card {
+  width: 300px;
+  height: 150px; 
+  background-color: rgba(255, 255, 255, 0.5); 
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 100%;
+  transition: left 0.5s ease-in-out;
+}
+
+.card.active {
+  left: 0; /* Aktif kart ekranın ortasında */
+}
+
+.card-content {
+  padding: 20px;
+}
+
+#oyunSonu {
+  margin-top: 20px;
+  display: none; /* Başlangıçta gizli */
+}
+
+#oyunSonu button {
+  padding: 10px 20px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}

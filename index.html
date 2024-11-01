@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hava Durumu Tahmin Oyunu</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="container">
+    <h1>Hava Durumu Tahmin Oyunu</h1>
+    <div class="card-container">
+      <div class="card" id="sehirKarti">
+        <div class="card-content">
+          <h2 id="sehirAdi"></h2>
+        </div>
+      </div>
+    </div>
+    <div id="tahminAlani">
+      <input type="number" id="tahmin" placeholder="Tahmininizi girin">
+      <button onclick="tahminEt()">Tahmin Et</button>
+    </div>
+    <div id="geriBildirim"></div>
+    <div id="kalanHak">Kalan Hak: 5</div>
+    <div id="puan">Puan: 0</div>
+    <div id="oyunSonu">
+      <button onclick="yeniSehirSec()">Yeni Şehir</button>
+      <button onclick="oyunuBitir()">Oyunu Bitir</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
