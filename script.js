@@ -1,4 +1,5 @@
-const WEATHER_API_KEY = '6841e5450643e5d4ff59981dbf58944e'; // OpenWeatherMap API anahtarı
+const WEATHER_API_KEY = '6841e5450643e5d4ff59981dbf58944e'; 
+
 let sehirListesi = [
     "Adana", "Adıyaman", "Afyonkarahisar", "Ağrı", "Aksaray", "Amasya", "Ankara", "Antalya", 
     "Ardahan", "Artvin", "Aydın", "Balıkesir", "Bartın", "Batman", "Bayburt", "Bilecik", 
@@ -38,7 +39,7 @@ let puan = 0;
 
 document.getElementById("sehirKarti").classList.add("active");
 
-// OpenWeatherMap üzerinden hava durumunu al
+
 async function havaDurumunuAl(sehir) {
     let [city, country] = sehir.includes(" - ") ? sehir.split(" - ") : [sehir, "TR"];
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)},${country}&appid=${WEATHER_API_KEY}&units=metric`;
@@ -59,7 +60,7 @@ async function havaDurumunuAl(sehir) {
     }
 }
 
-// Yeni şehir seçme fonksiyonu
+
 async function yeniSehirSec() {
     if (sehirListesi.length === 0) {
         document.getElementById("geriBildirim").innerHTML = "Şehir bilgisi alınamadı, lütfen yeniden deneyin.";
@@ -82,7 +83,7 @@ async function yeniSehirSec() {
     }
 }
 
-// Kullanıcı tahmin yaptığında
+
 function tahminEt() {
     let tahmin = parseInt(document.getElementById("tahmin").value);
 
@@ -111,7 +112,6 @@ function tahminEt() {
     document.getElementById("puan").innerHTML = "Puan: " + puan;
 }
 
-// Oyunu sıfırlayan fonksiyon
 function oyunuBitir() {
     puan = 0;
     tahminHakki = 5;
@@ -124,5 +124,4 @@ function oyunuBitir() {
     yeniSehirSec();
 }
 
-// İlk şehir seçimini yap ve oyunu başlat
 yeniSehirSec();
